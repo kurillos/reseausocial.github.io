@@ -1,3 +1,7 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
 body {
     background: #F1F1F1;
     font-family: Roboto, sans-serif;
@@ -46,7 +50,38 @@ a {
 }
 
 .container {
-    padding: 0 20px;
+    padding: 0 15px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    font-size: 12px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    padding: 0.6em 0;
+}
+
+.sidebar a::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(img/home.svg) center center / contain no-repeat;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar a.active,
+.sidebar a.active {
+    color: #000;
 }
 
 /* *******MEDIA QUERIES******* */
